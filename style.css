@@ -172,33 +172,121 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   background-size: cover;
 }
 
-#about .profil i {
-  font-size: 400px;
-  color: #2f6969;
-  margin: 80px 20px;
-}
-
 #about .article {
   margin: 20px;
+  visibility: hidden;
 }
 
-#my-skills {
-  height: 100vh;
-  background-image: url(./img/zak-7wBFsHWQDlk-unsplash.jpg);
-  background-repeat: no-repeat;
-  opacity: 0.4;
-  background-size: cover;
-  background-color: darkkhaki;
-}
-
-#my-skills .star {
+#about .profil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: darkorange;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .profil i {
+  font-size: 400px;
+  color: #368a8a;
+}
+
+#about .profil:hover ~ .article {
+  visibility: visible;
+  background: white;
+  font-weight: bolder;
+  opacity: 0.6;
+}
+
+#my-skills {
+  height: 100vh;
+  background-image: url();
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32px auto;
+      grid-template-columns: 32px auto;
+  -ms-grid-rows: (auto)[7];
+      grid-template-rows: repeat(7, auto);
+  color: white;
+  font-size: 32px;
+  padding-left: 10px;
+}
+
+#my-skills div {
+  width: 90%;
+  border: 1px solid white;
+  margin: 5px 0;
+  height: 25px;
+  border-radius: 25px;
+}
+
+#my-skills .fa-html5 {
+  color: tomato;
+}
+
+#my-skills .html {
+  background: -webkit-gradient(linear, left top, right top, from(#aa6262), color-stop(95%, #9b0303), color-stop(10%, transparent));
+  background: linear-gradient(to right, #aa6262, #9b0303 95%, transparent 10%);
+}
+
+#my-skills .fa-css3 {
+  color: blue;
+}
+
+#my-skills .css {
+  background: -webkit-gradient(linear, left top, right top, from(#6b78c2), color-stop(85%, #0f0380), color-stop(15%, transparent));
+  background: linear-gradient(to right, #6b78c2, #0f0380 85%, transparent 15%);
+}
+
+#my-skills .fa-sass {
+  color: #c02673;
+}
+
+#my-skills .sass {
+  background: -webkit-gradient(linear, left top, right top, from(#dba0d8), color-stop(80%, #b40881), color-stop(15%, transparent));
+  background: linear-gradient(to right, #dba0d8, #b40881 80%, transparent 15%);
+}
+
+#my-skills .fa-js {
+  color: #b6a403;
+}
+
+#my-skills .js {
+  background: -webkit-gradient(linear, left top, right top, from(#c9c890), color-stop(80%, #e6d602), color-stop(13%, transparent));
+  background: linear-gradient(to right, #c9c890, #e6d602 80%, transparent 13%);
+}
+
+#my-skills .fa-node-js {
+  color: green;
+}
+
+#my-skills .node-js {
+  background: -webkit-gradient(linear, left top, right top, from(#8dbe70), color-stop(75%, #0ac403), color-stop(7%, transparent));
+  background: linear-gradient(to right, #8dbe70, #0ac403 75%, transparent 7%);
+}
+
+#my-skills .fa-react {
+  color: turquoise;
+}
+
+#my-skills .react {
+  background: -webkit-gradient(linear, left top, right top, from(#70b9be), color-stop(85%, #03b3df), color-stop(7%, transparent));
+  background: linear-gradient(to right, #70b9be, #03b3df 85%, transparent 7%);
+}
+
+#my-skills .fa-bootstrap {
+  color: purple;
+}
+
+#my-skills .bootstrap {
+  background: -webkit-gradient(linear, left top, right top, from(#a170be), color-stop(90%, #a308ca), color-stop(7%, transparent));
+  background: linear-gradient(to right, #a170be, #a308ca 90%, transparent 7%);
 }
 
 @media screen and (min-width: 767px) {
@@ -226,6 +314,18 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+  }
+  #about .profil {
+    margin-left: 20px;
+  }
+  #about .profil:hover ~ .article {
+    visibility: visible;
+    background: white;
+    font-weight: bolder;
+    opacity: 0.6;
   }
 }
 /*# sourceMappingURL=style.css.map */

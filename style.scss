@@ -74,7 +74,7 @@ body {
   }
   
   #overlay {
-    // margin-top: 100px;
+    
     padding-bottom: 10px;
      height: 25vh;
     width: 100vw;
@@ -134,37 +134,99 @@ align-items: center;
 flex-direction: column;
 background-image: url(./img/liana-mikah-RisZkNn4Z5Q-unsplash.jpg);
 background-size: cover;
-
-.profil{
-    
-    i{
-        font-size: 400px;
-        color: rgb(47, 105, 105);
-        margin: 80px 20px;
-    }
-    // make  box shadow with hover and animation
-}
-.article{
+    .article{
     margin:20px ;
-  
-}
+    visibility: hidden;
+   
+    }
+    .profil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+        font-size: 400px;
+        color: rgb(54, 138, 138);
+        
+         }
+      
+        &:hover ~ .article{
+            visibility: visible;
+            background:  white ;
+            font-weight: bolder;
+            opacity: 0.6;
+       }
+   // make  box shadow with hover and animation 
+        
+    }
+
 }
 #my-skills{
     height: 100vh;
-    background-image: url(./img/zak-7wBFsHWQDlk-unsplash.jpg);
+    background-image: url();
     background-repeat: no-repeat;
-    opacity: 0.4;
+    opacity: 0.7;
     background-size: cover;
     
-    
-    background-color: darkkhaki;
-    .star{ 
-    display: flex;
-    justify-content: center;
-    color: darkorange;
+    display: grid;
+    grid-template-columns: 32px auto;
+    grid-template-rows: repeat(7,auto);
+    color: white;
+    font-size: 32px;
+    padding-left: 10px;
+    div {
+        width: 90%;
+        border: 1px solid white;
+        margin: 5px 0;
+        height: 25px;
+        border-radius: 25px;
+    }
+    .fa-html5{
+        color: tomato;
+    }
+    .html{
+        background:linear-gradient(to  right, rgb(170, 98, 98), rgb(155, 3, 3) 95%, transparent 10%);
+    }
+    .fa-css3{
+        color: blue;
+    }
+    .css{
+        background:linear-gradient(to  right, rgb(107, 120, 194), rgb(15, 3, 128) 85%, transparent 15%);
+    }
+    .fa-sass{
+        color: rgb(192, 38, 115);
+    }
+    .sass{
+        background:linear-gradient(to  right, rgb(219, 160, 216), rgb(180, 8, 129) 80%, transparent 15%);
+    }
+    .fa-js{
+        color: rgb(182, 164, 3);
+    }
+    .js{
+        background:linear-gradient(to  right, rgb(201, 200, 144), rgb(230, 214, 2) 80%, transparent 13%);
+    }
+    .fa-node-js{
+        color: green;
+    }
+    .node-js{
+        background:linear-gradient(to  right, rgb(141, 190, 112), rgb(10, 196, 3) 75%, transparent 7%);
+    }
+    .fa-react{
+        color: turquoise;
+    }
+    .react{
+        background:linear-gradient(to  right, rgb(112, 185, 190), rgb(3, 179, 223) 85%, transparent 7%);
+    }
+    .fa-bootstrap{
+        color: purple;
+    }
+    .bootstrap{
+        background:linear-gradient(to  right, rgb(161, 112, 190), rgb(163, 8, 202) 90%, transparent 7%);
+    }
+    // animation ekle
+
 }
-   
-}
+
+
 
   @media screen and (min-width:767px){
      #overlay-button {
@@ -184,8 +246,18 @@ background-size: cover;
         }
     }
     #about{
-        flex-direction: row;
-        
+       flex-direction: row;
+       align-items: space-around;
+        .profil{
+            margin-left: 20px;
+           
+            &:hover ~ .article{
+                visibility:visible;
+                background:  white ;
+                font-weight: bolder;
+                opacity: 0.6;
+           }
+        }
 
     }
-  }
+}
