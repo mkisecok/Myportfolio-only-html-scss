@@ -217,7 +217,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 #my-skills {
-  height: 100vh;
+  height: 110vh;
   background-image: url(./img/raychan-e_J7i3eQEfo-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -304,7 +304,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 #my-projects {
-  height: 100vh;
+  height: 170vh;
   font-size: 2em;
   background-color: #b99999;
 }
@@ -407,29 +407,57 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   background: linear-gradient(to right, purple 59%, red 41%);
 }
 
+#contact h2 {
+  font-size: 2em;
+}
+
+#contact form {
+  width: 70%;
+  padding: 10px;
+}
+
+#contact form input[type=text], #contact form input[type=email], #contact form select, #contact form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+#contact form input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#contact form .contact-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
 @media (min-width: 767px) {
   main {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 0 0 400px;
   }
   #overlay-button {
     visibility: hidden;
   }
   #overlay {
     visibility: visible;
-    height: 50px;
-  }
-  #overlay ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    width: 180px;
+    height: 100%;
+    z-index: 1;
   }
   #about {
     -webkit-box-orient: horizontal;
@@ -448,6 +476,9 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     background: white;
     font-weight: bolder;
     opacity: 0.6;
+  }
+  #my-projects {
+    height: 100vh;
   }
   #my-projects .cards {
     -webkit-box-orient: horizontal;
