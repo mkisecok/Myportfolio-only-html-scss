@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-@mixin flex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
 body {
     background-color: rgb(230, 201, 163);
     margin: 0;
@@ -21,12 +13,12 @@ body {
   }
   
   *::-webkit-scrollbar-track {
-    background: transparent;
+    background:transparent;
   }
   
   *::-webkit-scrollbar-thumb {
     background: transparent;
-    border: none;
+    
   }
   
   
@@ -380,8 +372,21 @@ background-size: cover;
 
     main{
       max-width: 1200px;
-      margin: 0 0 0 400px;
+      margin: 0 auto
       
+    }
+    *::-webkit-scrollbar {
+      width: 16px;
+    }
+    
+    *::-webkit-scrollbar-track {
+      background:#e98d8d;
+      border-radius: 20px;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, black,white,black);
+      border-radius: 25px;
     }
      #overlay-button, {
        
