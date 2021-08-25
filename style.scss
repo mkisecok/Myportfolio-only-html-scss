@@ -1,10 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@mixin flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 body {
     background-color: rgb(230, 201, 163);
     margin: 0;
     font-family: 'Roboto', sans-serif;
     width: 100%;
+    box-sizing: border-box;
+   
    }
+   *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
   
  nav{
      display: flex;
@@ -46,7 +70,7 @@ body {
         }
       }
       &:hover span, &:hover span:before, &:hover span:after {
-        background: #333332;
+        background: #ffffff;
       }
   }
   
@@ -78,7 +102,7 @@ body {
     padding-bottom: 10px;
      height: 25vh;
     width: 100vw;
-    background: #e47c6f;
+    background: #e98d8d;
     z-index: 2;
     visibility: hidden;
     position: fixed;
@@ -225,11 +249,103 @@ background-size: cover;
 
 }
 
+#my-projects {
+  height: 100vh;
+  font-size: 2em;
+  background-color: rgb(185, 153, 153);
+  .cards{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
 
 
-  @media screen and (min-width:767px){
+  .card {
+  background-color: rgb(172, 224, 233);
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 70%;
+  
+  border-radius: 5px;
+  font-size: 12px;
+  img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+ }
+ &:hover {
+  box-shadow: 15px 8px 16px 0 rgba(0,0,0,0.2);
+ } 
+ .project-info{
+   position: relative;
+   padding: 10px;
+  
+   a {
+     position: absolute;
+     bottom: 5px;
+     right: 5px;
+     text-decoration: none;
+     background-color: blue;
+     width: 50px;
+     color: white;
+     border-radius: 3px;
+     padding: 5px;
+   }
+ }
+.linear-color {
+  
+  width: 80%;
+  height: 8px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.css-punkt{
+  position: absolute;
+  background-color: purple;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 58%;
+  left: 15%;
+}
+.html-punkt{
+  position: absolute;
+  bottom: 16%;
+  left: 15%;
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+  .lc-1{
+  background:linear-gradient(to  right, purple 54%,red 46%);
+  }
+  .lc-2{
+  background:linear-gradient(to  right, purple 58%,red 42%);
+  }
+  .lc-3{
+    background:linear-gradient(to  right, purple 59%,red 41%);
+    }
+ }
+}
+ 
+}
+
+
+
+
+
+
+
+  @media (min-width:767px){
+
+    main{
+      max-width: 1200px;
+      margin: 0 auto;
+    }
      #overlay-button {
-        //   löschen before
+        
           visibility: hidden;   
       }
     #overlay {
@@ -249,14 +365,25 @@ background-size: cover;
        align-items: space-around;
         .profil{
             margin-left: 20px;
-           
+       
             &:hover ~ .article{
-                visibility:visible;
-                background:  white ;
-                font-weight: bolder;
-                opacity: 0.6;
-           }
+                 visibility:visible;
+                 background:  white ;
+                 font-weight: bolder;
+                 opacity: 0.6;
+            }
         }
 
     }
+    #my-projects{
+      .cards{
+        flex-direction: row;
+      .card{
+        width: 33%;
+        margin: 20px;
+      }
+
+      
+    }
+  }
 }

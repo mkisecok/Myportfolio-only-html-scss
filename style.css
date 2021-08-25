@@ -4,6 +4,21 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
 }
 
 nav {
@@ -56,7 +71,7 @@ nav {
 }
 
 #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
-  background: #333332;
+  background: #ffffff;
 }
 
 input[type=checkbox] {
@@ -86,7 +101,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   padding-bottom: 10px;
   height: 25vh;
   width: 100vw;
-  background: #e47c6f;
+  background: #e98d8d;
   z-index: 2;
   visibility: hidden;
   position: fixed;
@@ -288,7 +303,115 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   background: linear-gradient(to right, #a170be, #a308ca 90%, transparent 7%);
 }
 
-@media screen and (min-width: 767px) {
+#my-projects {
+  height: 100vh;
+  font-size: 2em;
+  background-color: #b99999;
+}
+
+#my-projects .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#my-projects .cards .card {
+  background-color: #ace0e9;
+  margin: 20px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 70%;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+#my-projects .cards .card img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+
+#my-projects .cards .card:hover {
+  -webkit-box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#my-projects .cards .card .project-info {
+  position: relative;
+  padding: 10px;
+}
+
+#my-projects .cards .card .project-info a {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  text-decoration: none;
+  background-color: blue;
+  width: 50px;
+  color: white;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#my-projects .cards .card .linear-color {
+  width: 80%;
+  height: 8px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+#my-projects .cards .card .css-punkt {
+  position: absolute;
+  background-color: purple;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 58%;
+  left: 15%;
+}
+
+#my-projects .cards .card .html-punkt {
+  position: absolute;
+  bottom: 16%;
+  left: 15%;
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+#my-projects .cards .card .lc-1 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(54%, purple), color-stop(46%, red));
+  background: linear-gradient(to right, purple 54%, red 46%);
+}
+
+#my-projects .cards .card .lc-2 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(58%, purple), color-stop(42%, red));
+  background: linear-gradient(to right, purple 58%, red 42%);
+}
+
+#my-projects .cards .card .lc-3 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(59%, purple), color-stop(41%, red));
+  background: linear-gradient(to right, purple 59%, red 41%);
+}
+
+@media (min-width: 767px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   #overlay-button {
     visibility: hidden;
   }
@@ -325,6 +448,16 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
     background: white;
     font-weight: bolder;
     opacity: 0.6;
+  }
+  #my-projects .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #my-projects .cards .card {
+    width: 33%;
+    margin: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
