@@ -322,6 +322,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 20px;
 }
 
 #my-projects .cards .card {
@@ -344,6 +345,8 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 #my-projects .cards .card:hover {
   -webkit-box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 15px 8px 16px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #my-projects .cards .card .project-info {
@@ -406,6 +409,10 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   background: linear-gradient(to right, purple 59%, red 41%);
 }
 
+#contact {
+  padding-left: 20px;
+}
+
 #contact h2 {
   font-size: 2em;
 }
@@ -444,6 +451,40 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   padding: 20px;
 }
 
+footer {
+  background-color: black;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 200px;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer ul li {
+  color: #ffffff;
+  margin: 10px;
+  font-size: 32px;
+  list-style-type: none;
+}
+
+footer ul li i {
+  color: white;
+}
+
+footer ul li i:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
 @media (min-width: 767px) {
   main {
     max-width: 1200px;
@@ -463,6 +504,9 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   }
   #overlay-button {
     visibility: hidden;
+  }
+  #overlay-button span {
+    display: none;
   }
   #overlay {
     visibility: visible;
