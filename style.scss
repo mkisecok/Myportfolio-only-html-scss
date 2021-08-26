@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-    background-color: rgb(230, 201, 163);
+    
     margin: 0;
     font-family: 'Roboto', sans-serif;
     width: 100%;
@@ -144,6 +144,7 @@ body {
 }
 
 #about{
+  
 height: 100vh;
 display: flex;
 justify-content: center;
@@ -153,7 +154,11 @@ background-image: url(./img/liana-mikah-RisZkNn4Z5Q-unsplash.jpg);
 background-size: cover;
     .article{
     margin:20px ;
-    visibility: hidden;
+    background:  white ;
+    font-weight: bolder;
+    opacity: 0.6;
+    padding: 10px;
+    
    
     }
     .profil{
@@ -166,12 +171,7 @@ background-size: cover;
         
          }
       
-        &:hover ~ .article{
-            visibility: visible;
-            background:  white ;
-            font-weight: bolder;
-            opacity: 0.6;
-       }
+        
    // make  box shadow with hover and animation 
         
     }

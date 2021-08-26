@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 body {
-  background-color: #e6c9a3;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -188,7 +187,10 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 #about .article {
   margin: 20px;
-  visibility: hidden;
+  background: white;
+  font-weight: bolder;
+  opacity: 0.6;
+  padding: 10px;
 }
 
 #about .profil {
@@ -206,13 +208,6 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 #about .profil i {
   font-size: 400px;
   color: #368a8a;
-}
-
-#about .profil:hover ~ .article {
-  visibility: visible;
-  background: white;
-  font-weight: bolder;
-  opacity: 0.6;
 }
 
 #my-skills {
