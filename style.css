@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@-webkit-keyframes expandBar {
+  from {
+    width: 0px;
+  }
+  to {
+    width: width;
+  }
+}
+@keyframes expandBar {
+  from {
+    width: 0px;
+  }
+  to {
+    width: width;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -33,7 +50,7 @@ nav {
   right: 2em;
   top: 3em;
   padding: 26px 11px;
-  z-index: 0;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -97,9 +114,10 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 #overlay {
   padding-bottom: 10px;
-  height: 200px;
+  height: 250px;
   width: 100vw;
   background: #e98d8d;
+  z-index: 1;
   visibility: hidden;
   position: fixed;
 }
@@ -143,6 +161,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 .background-img {
+  font-size: 28px;
   height: 100vh;
   background-image: url(./img/quinton-coetzee-u-n1AFjUclo-unsplash.jpg);
   opacity: 0.8;
@@ -163,6 +182,94 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
+}
+
+.background-img h1 {
+  font-size: 48px;
+}
+
+.background-img span {
+  color: lightseagreen;
+}
+
+.slide-in-elliptic-right-bck {
+  -webkit-animation: slide-in-elliptic-right-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-elliptic-right-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-elliptic-right-bck {
+  0% {
+    -webkit-transform: translateX(800px) rotateY(30deg) scale(6.5);
+            transform: translateX(800px) rotateY(30deg) scale(6.5);
+    -webkit-transform-origin: -100% 50%;
+            transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+            transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 600px 50%;
+            transform-origin: 600px 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-elliptic-right-bck {
+  0% {
+    -webkit-transform: translateX(800px) rotateY(30deg) scale(6.5);
+            transform: translateX(800px) rotateY(30deg) scale(6.5);
+    -webkit-transform-origin: -100% 50%;
+            transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+            transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 600px 50%;
+            transform-origin: 600px 50%;
+    opacity: 1;
+  }
+}
+
+.focus-in-contract-bck {
+  -webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
 }
 
 #about {
@@ -240,60 +347,130 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 #my-skills .html {
   background: -webkit-gradient(linear, left top, right top, from(#aa6262), color-stop(95%, #9b0303), color-stop(10%, transparent));
   background: linear-gradient(to right, #aa6262, #9b0303 95%, transparent 10%);
+  -webkit-animation-name: expandBar;
+          animation-name: expandBar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
-#my-skills .fa-css3 {
+.fa-css3 {
   color: blue;
 }
 
-#my-skills .css {
+.css {
   background: -webkit-gradient(linear, left top, right top, from(#6b78c2), color-stop(85%, #0f0380), color-stop(15%, transparent));
   background: linear-gradient(to right, #6b78c2, #0f0380 85%, transparent 15%);
+  -webkit-animation-name: expandBar;
+          animation-name: expandBar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
-#my-skills .fa-sass {
+.fa-sass {
   color: #c02673;
 }
 
-#my-skills .sass {
+.sass {
   background: -webkit-gradient(linear, left top, right top, from(#dba0d8), color-stop(80%, #b40881), color-stop(15%, transparent));
   background: linear-gradient(to right, #dba0d8, #b40881 80%, transparent 15%);
+  -webkit-animation-name: expandBar;
+          animation-name: expandBar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
-#my-skills .fa-js {
+.fa-js {
   color: #b6a403;
 }
 
-#my-skills .js {
+.js {
   background: -webkit-gradient(linear, left top, right top, from(#c9c890), color-stop(80%, #e6d602), color-stop(13%, transparent));
   background: linear-gradient(to right, #c9c890, #e6d602 80%, transparent 13%);
+  -webkit-animation-name: expandBar;
+          animation-name: expandBar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
-#my-skills .fa-node-js {
+.fa-node-js {
   color: green;
 }
 
-#my-skills .node-js {
+.node-js {
   background: -webkit-gradient(linear, left top, right top, from(#8dbe70), color-stop(75%, #0ac403), color-stop(7%, transparent));
   background: linear-gradient(to right, #8dbe70, #0ac403 75%, transparent 7%);
+  -webkit-animation-name: expandBar;
+          animation-name: expandBar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
-#my-skills .fa-react {
+.fa-react {
   color: turquoise;
 }
 
-#my-skills .react {
+.react {
   background: -webkit-gradient(linear, left top, right top, from(#70b9be), color-stop(85%, #03b3df), color-stop(7%, transparent));
   background: linear-gradient(to right, #70b9be, #03b3df 85%, transparent 7%);
+  -webkit-animation-name: expandBar;
+          animation-name: expandBar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
-#my-skills .fa-bootstrap {
+.fa-bootstrap {
   color: purple;
 }
 
-#my-skills .bootstrap {
+.bootstrap {
   background: -webkit-gradient(linear, left top, right top, from(#a170be), color-stop(90%, #a308ca), color-stop(7%, transparent));
   background: linear-gradient(to right, #a170be, #a308ca 90%, transparent 7%);
+  -webkit-animation-name: expandBar;
+          animation-name: expandBar;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 #my-projects {
@@ -334,6 +511,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 #my-projects .cards .card img {
   border-radius: 5px 5px 0 0;
   width: 100%;
+  height: 200px;
 }
 
 #my-projects .cards .card:hover {
@@ -346,6 +524,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 #my-projects .cards .card .project-info {
   position: relative;
   padding: 10px;
+  height: 110px;
 }
 
 #my-projects .cards .card .project-info a {
@@ -615,7 +794,6 @@ footer .footer-right .footer-icons a:hover {
   footer .footer-right {
     display: block;
     width: 100%;
-    margin-bottom: 40px;
     text-align: center;
   }
   footer .footer-center p {
@@ -633,6 +811,11 @@ footer .footer-right .footer-icons a:hover {
 }
 
 @media (min-width: 767px) {
+  .background-img {
+    z-index: 1;
+    width: 90%;
+    margin-left: 10%;
+  }
   main {
     max-width: 1200px;
     margin: 0 auto;
@@ -657,9 +840,9 @@ footer .footer-right .footer-icons a:hover {
   }
   #overlay {
     visibility: visible;
-    width: 180px;
+    width: 10%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   #about {
     -webkit-box-orient: horizontal;
@@ -687,7 +870,8 @@ footer .footer-right .footer-icons a:hover {
     margin: 20px;
   }
   footer {
-    z-index: 3;
+    width: 90%;
+    margin-left: 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */

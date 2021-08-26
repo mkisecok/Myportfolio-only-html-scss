@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
+@mixin expandBar {
+  animation-name: expandBar;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-fill-mode: both;
+      transition-timing-function: ease-in-out;
+}
+@keyframes expandBar {
+  from {
+      width: 0px;
+  }
+  to {
+      width: width;
+  }
+}
 body {
     
     margin: 0;
@@ -33,7 +47,7 @@ body {
     right: 2em;
     top: 3em;
     padding: 26px 11px;
-    z-index: 0;
+    z-index: 2;
     cursor: pointer;
     // user-select: none;
     span {
@@ -92,10 +106,10 @@ body {
   #overlay {
     
     padding-bottom: 10px;
-    height: 200px;
+    height: 250px;
     width: 100vw;
     background: #e98d8d;
-   
+   z-index: 1;
     visibility: hidden;
     position: fixed;
     
@@ -128,7 +142,7 @@ body {
     }
   }
 .background-img{
-  
+  font-size: 28px;
      height: 100vh;
     background-image: url(./img/quinton-coetzee-u-n1AFjUclo-unsplash.jpg);
     opacity: 0.8;
@@ -140,8 +154,54 @@ body {
     align-items: center;
     flex-direction: column;
     color: white;
+    h1{
+      font-size: 48px;
+    }
+    span {
+      color: lightseagreen;
+    }
 
 }
+.slide-in-elliptic-right-bck {
+	animation: slide-in-elliptic-right-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-elliptic-right-bck {
+  0% {
+    transform: translateX(800px) rotateY(30deg) scale(6.5);
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotateY(0) scale(1);
+    transform-origin: 600px 50%;
+    opacity: 1;
+  }
+}
+.focus-in-contract-bck {
+	animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 #about{
   
@@ -172,7 +232,7 @@ background-size: cover;
          }
       
         
-   // make  box shadow with hover and animation 
+  
         
     }
 
@@ -201,46 +261,56 @@ background-size: cover;
     }
     .html{
         background:linear-gradient(to  right, rgb(170, 98, 98), rgb(155, 3, 3) 95%, transparent 10%);
+        
+        @include expandBar;
+      }
+        
     }
     .fa-css3{
         color: blue;
     }
     .css{
         background:linear-gradient(to  right, rgb(107, 120, 194), rgb(15, 3, 128) 85%, transparent 15%);
+        @include expandBar;
     }
     .fa-sass{
         color: rgb(192, 38, 115);
     }
     .sass{
         background:linear-gradient(to  right, rgb(219, 160, 216), rgb(180, 8, 129) 80%, transparent 15%);
+        @include expandBar;
     }
     .fa-js{
         color: rgb(182, 164, 3);
     }
     .js{
         background:linear-gradient(to  right, rgb(201, 200, 144), rgb(230, 214, 2) 80%, transparent 13%);
+        @include expandBar;
     }
     .fa-node-js{
         color: green;
     }
     .node-js{
         background:linear-gradient(to  right, rgb(141, 190, 112), rgb(10, 196, 3) 75%, transparent 7%);
+        @include expandBar;
     }
     .fa-react{
         color: turquoise;
     }
     .react{
         background:linear-gradient(to  right, rgb(112, 185, 190), rgb(3, 179, 223) 85%, transparent 7%);
+        @include expandBar;
     }
     .fa-bootstrap{
         color: purple;
     }
     .bootstrap{
         background:linear-gradient(to  right, rgb(161, 112, 190), rgb(163, 8, 202) 90%, transparent 7%);
+        @include expandBar;
     }
-    // animation ekle
+  
 
-}
+
 
 #my-projects {
   height: 170vh;
@@ -263,9 +333,10 @@ background-size: cover;
   
   border-radius: 5px;
   font-size: 12px;
-  img {
-  border-radius: 5px 5px 0 0;
-  width: 100%;
+      img {
+   border-radius: 5px 5px 0 0;
+   width: 100%;
+   height: 200px;
  }
  &:hover {
   box-shadow: 15px 8px 16px 0 rgba(0,0,0,0.2);
@@ -274,6 +345,7 @@ background-size: cover;
  .project-info{
    position: relative;
    padding: 10px;
+   height: 110px;
   
    a {
      position: absolute;
@@ -373,6 +445,7 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 55px 50px;
+  
   h3{
     color:  #ffffff;
     font: normal 36px 'Open Sans', cursive;
@@ -517,6 +590,7 @@ footer{
 
 	footer{
 		font: bold 16px sans-serif;
+    
     .footer-center{
       width: auto;
     }
@@ -528,7 +602,7 @@ footer{
 	footer .footer-right{
 		display: block;
 		width: 100%;
-		margin-bottom: 40px;
+	
 		text-align: center;
 	}
 
@@ -559,10 +633,15 @@ footer{
 
 
   @media (min-width:767px){
-
+.background-img{
+  z-index: 1;
+   width: 90%;
+   margin-left: 10%;
+ 
+}
     main{
       max-width: 1200px;
-      margin: 0 auto
+      margin:0 auto;
       
     }
     *::-webkit-scrollbar {
@@ -580,16 +659,16 @@ footer{
     }
      #overlay-button, {
        
-          visibility: hidden;  
+           visibility: hidden;  
       span{
         display: none;
       }
       }
     #overlay {
         visibility: visible;
-        width: 180px;
+        width: 10%;
         height: 100%;
-        z-index: 1;
+         z-index: 2;
         
        
     }
@@ -611,12 +690,12 @@ footer{
         width: 33%;
         margin: 20px;
       }
-
-      
-    }
+}
   }
   footer {
-z-index: 3;
+    width: 90%;
+    margin-left: 10%
+   
 
 
 
