@@ -33,7 +33,7 @@ body {
     right: 2em;
     top: 3em;
     padding: 26px 11px;
-    z-index: 5;
+    z-index: 0;
     cursor: pointer;
     // user-select: none;
     span {
@@ -92,10 +92,10 @@ body {
   #overlay {
     
     padding-bottom: 10px;
-     height: 25vh;
+    height: 200px;
     width: 100vw;
     background: #e98d8d;
-    z-index: 2;
+   
     visibility: hidden;
     position: fixed;
     
@@ -365,6 +365,7 @@ background-size: cover;
   }
 }
 footer{
+  
 	background: #666;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
@@ -598,12 +599,7 @@ footer{
         .profil{
             margin-left: 20px;
        
-            &:hover ~ .article{
-                 visibility:visible;
-                 background:  white ;
-                 font-weight: bolder;
-                 opacity: 0.6;
-            }
+          
         }
 
     }
@@ -620,7 +616,7 @@ footer{
     }
   }
   footer {
-
+z-index: 3;
 
 
 

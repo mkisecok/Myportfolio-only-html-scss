@@ -33,7 +33,7 @@ nav {
   right: 2em;
   top: 3em;
   padding: 26px 11px;
-  z-index: 5;
+  z-index: 0;
   cursor: pointer;
 }
 
@@ -97,10 +97,9 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 #overlay {
   padding-bottom: 10px;
-  height: 25vh;
+  height: 200px;
   width: 100vw;
   background: #e98d8d;
-  z-index: 2;
   visibility: hidden;
   position: fixed;
 }
@@ -674,12 +673,6 @@ footer .footer-right .footer-icons a:hover {
   #about .profil {
     margin-left: 20px;
   }
-  #about .profil:hover ~ .article {
-    visibility: visible;
-    background: white;
-    font-weight: bolder;
-    opacity: 0.6;
-  }
   #my-projects {
     height: 100vh;
   }
@@ -692,6 +685,9 @@ footer .footer-right .footer-icons a:hover {
   #my-projects .cards .card {
     width: 33%;
     margin: 20px;
+  }
+  footer {
+    z-index: 3;
   }
 }
 /*# sourceMappingURL=style.css.map */
