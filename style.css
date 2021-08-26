@@ -58,7 +58,7 @@ nav {
   height: 4px;
   width: 35px;
   border-radius: 2px;
-  background-color: #ee0505;
+  background-color: lightseagreen;
   position: relative;
   display: block;
   -webkit-transition: all .2s ease-in-out;
@@ -78,7 +78,7 @@ nav {
   height: 4px;
   width: 35px;
   border-radius: 2px;
-  background-color: #df1212;
+  background-color: lightseagreen;
   position: absolute;
   content: "";
   -webkit-transition: all .2s ease-in-out;
@@ -116,7 +116,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   padding-bottom: 10px;
   height: 250px;
   width: 100vw;
-  background: #e98d8d;
+  background: lightseagreen;
   z-index: 1;
   visibility: hidden;
   position: fixed;
@@ -273,6 +273,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 #about {
+  margin-top: 40px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,13 +314,14 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 #about .profil i {
   font-size: 400px;
-  color: #368a8a;
+  color: lightseagreen;
 }
 
 #my-skills {
   height: 110vh;
   background-image: url(./img/raychan-e_J7i3eQEfo-unsplash.jpg);
   background-repeat: no-repeat;
+  margin-top: 40px;
   background-size: cover;
   display: -ms-grid;
   display: grid;
@@ -497,7 +499,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 #my-projects .cards .card {
-  background-color: #ace0e9;
+  background-color: #d0da9a;
   margin: 20px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -511,7 +513,6 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 #my-projects .cards .card img {
   border-radius: 5px 5px 0 0;
   width: 100%;
-  height: 200px;
 }
 
 #my-projects .cards .card:hover {
@@ -821,10 +822,10 @@ footer .footer-right .footer-icons a:hover {
     margin: 0 auto;
   }
   *::-webkit-scrollbar {
-    width: 16px;
+    width: 12px;
   }
   *::-webkit-scrollbar-track {
-    background: #e98d8d;
+    background: lightseagreen;
     border-radius: 20px;
   }
   *::-webkit-scrollbar-thumb {
@@ -857,7 +858,7 @@ footer .footer-right .footer-icons a:hover {
     margin-left: 20px;
   }
   #my-projects {
-    height: 100vh;
+    height: 60vh;
   }
   #my-projects .cards {
     -webkit-box-orient: horizontal;
