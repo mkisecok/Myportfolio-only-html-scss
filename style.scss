@@ -393,17 +393,23 @@ background-size: cover;
     border-radius: 4px; 
     margin-top: 6px; 
     margin-bottom: 16px;
-    resize: vertical 
+    resize: vertical ;
+    
+  }
+  input:focus, textarea:focus {
+    outline: none !important;
+    border-color:$myColor;
+    box-shadow: 0 0 10px $myColor;
   }
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color: $myColor;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     &:hover {
-    background-color: #45a049;
+    background-color: rgb(14, 121, 115);
   }
   
 }

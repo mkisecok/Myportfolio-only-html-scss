@@ -606,8 +606,15 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   resize: vertical;
 }
 
+#contact form input:focus, #contact form textarea:focus {
+  outline: none !important;
+  border-color: lightseagreen;
+  -webkit-box-shadow: 0 0 10px lightseagreen;
+          box-shadow: 0 0 10px lightseagreen;
+}
+
 #contact form input[type=submit] {
-  background-color: #04AA6D;
+  background-color: lightseagreen;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -616,7 +623,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 #contact form input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #0e7973;
 }
 
 #contact form .contact-form {
